@@ -15,12 +15,20 @@ html, body {
   box-sizing: border-box; /* Asegura que padding se incluya en el tamaño total */
 }
 
+.container {
+  display: flex; /* Usar flexbox para alinear horizontalmente */
+  align-items: center; /* Alinear verticalmente al centro */
+}
+
 .icono {
+  margin-right: 10px; /* Espacio entre los iconos y el texto */
   display: flex; /* Activa flexbox en el contenedor */
   justify-content: flex-start; /* Alinea los elementos hacia la izquierda */
   align-items: flex-start; /* Alinea los elementos hacia la parte superior */
   height: 42%; /* Asegura que el contenedor ocupe toda la altura deseada */
 }
+
+
 
 .icono .logo {
   height: 150px;
@@ -33,6 +41,14 @@ html, body {
   color: black; /* Color del texto */
   margin-left: 1rem; /* Espaciado a la izquierda del texto para separarlo del logo */
   margin-top: auto; /* Empuja el texto hacia la parte inferior del contenedor */
+}
+
+.social {
+  display: flex; /* Alinear los iconos de redes sociales en línea */
+  gap: 10px; /* Espacio entre los iconos de redes sociales */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 1; /* Alinear en la parte superior */
+  right: 0; /* Alinear a la derecha */
 }
 
 @keyframes typing {
@@ -55,6 +71,26 @@ html, body {
   position: relative; /* Necesario para evitar desplazamiento */
 }
 
+.pokemons{
+  width:300px;
+  height: auto;
+  position: left;
+}
+
+.card {
+  padding: 2em;
+  width: 100%; /* Hace que la tarjeta ocupe el ancho completo */
+  box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
+}
+
+.platzi-experiencia {
+  text-align: left;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
 
 footer {
   position: fixed; /* Hace que el footer esté fijo */
@@ -66,10 +102,33 @@ footer {
   padding: 1em; /* Espaciado interno */
 }
 
-.card {
-  padding: 2em;
+.social {
+  float: right;
+  width: 200px; /* Ajusta según el tamaño deseado */
 }
 
-.read-the-docs {
-  color: #888;
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .icono {
+    flex-direction: column; /* Alinea los elementos en columna */
+  }
+
+  .icono .logo {
+    max-height: 100px; /* Limita la altura en pantallas pequeñas */
+  }
+
+  .texto {
+    font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
+  }
 }
+
+@media (max-width: 480px) {
+  .texto {
+    font-size: 1rem; /* Ajusta el tamaño de la fuente aún más pequeño */
+  }
+}
+
