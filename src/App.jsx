@@ -1,11 +1,15 @@
-import fd from './assets/fd.jpg'
 import pokemons from './assets/pokemons.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import fd from './assets/fd.jpg';
+
+
 
 import './App.css'
+import SocialMedia from './components/Social/SocialMedia';
+import Program from './components/Code/Program';
+import Database from './components/Base/Database';
+
+
+
 
 function App() {
 
@@ -19,22 +23,18 @@ function App() {
               </a>
                 <h1 className='texto'>Felipe_Develop</h1>
             </div>
-            <div className='social'>
-              <a href=''>
-                <FontAwesomeIcon icon={faFacebook} size="2x" color="#3b5998"/>
-              </a>
-              <a href='https://www.linkedin.com/in/camacho-rodriguez/'>
-                <FontAwesomeIcon icon={faLinkedin} size="2x" color="#0077B5" />
-              </a>
-              <a href='https://www.instagram.com/felipe_develop/'>
-                <FontAwesomeIcon icon={faInstagram} size="2x" color="#E1306C"/>
-              </a>
-            </div>
-          </div>
-        
+            <SocialMedia />
+      </div>
 
+      <div>
+         <Program />
+         <br/>
+         <Database />
+      </div>
       </header>
 
+      <br/>
+      
         <section>
               <div className="card">
                
@@ -56,10 +56,9 @@ function App() {
 
     <br />
 
-      <footer>
+      <footer >
         <p>&copy; 2025 Felipe_develop. Todos los derechos reservados.</p>
       </footer>
-
     </>
   )
 }
