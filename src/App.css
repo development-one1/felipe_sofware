@@ -1,75 +1,150 @@
-html, body {
-  background-color: white; /* Fondo blanco para toda la página */
-  margin: 0; /* Eliminar márgenes por defecto */
-  padding: 0; /* Eliminar padding por defecto */
-  height: 100%; /* Asegurar que el fondo cubra toda la altura */
-}
-
-#root {
-  background-color: white;
-  width: 100%; /* Abarca el 100% del ancho */
-  height: 100%; /* Abarca el 100% de la altura */
-  margin: 0; /* Elimina márgenes automáticos */
-  padding: 2rem; /* Espaciado interno */
-  text-align: center;
-  box-sizing: border-box; /* Asegura que padding se incluya en el tamaño total */
-}
-
-.icono {
-  display: flex; /* Activa flexbox en el contenedor */
-  justify-content: flex-start; /* Alinea los elementos hacia la izquierda */
-  align-items: flex-start; /* Alinea los elementos hacia la parte superior */
-  height: 42%; /* Asegura que el contenedor ocupe toda la altura deseada */
-}
-
-.icono .logo {
-  height: 150px;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 800ms;
-}
-
-.icono .texto {
-  color: black; /* Color del texto */
-  margin-left: 1rem; /* Espaciado a la izquierda del texto para separarlo del logo */
-  margin-top: auto; /* Empuja el texto hacia la parte inferior del contenedor */
-}
-
-@keyframes typing {
-  from {
-    width: 0; /* Comienza sin mostrar el texto */
+/* ==========================
+   Global Styles
+   ========================== */
+   html,
+   body {
+     background-color: white;
+     margin: 0;
+     padding: 0;
+     min-height: 100vh;
+     font-family: Arial, sans-serif;
+     overflow-y: visible;
+     overflow-x: hidden;
+   }
+   
+   /* ==========================
+      Layout Containers
+      ========================== */
+   .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 1rem;
+   }
+   
+   
+   /* ==========================
+      Icono Styling
+      ========================== */
+   .icono {
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     margin-right: 10px;
+     height: 42%;
+   }
+   
+   .icono .logo {
+     height: 150px;
+     padding: 1.5em;
+     will-change: filter;
+     transition: filter 800ms;
+   }
+   
+   .icono .texto {
+     color: black;
+     margin-left: 1rem;
+     margin-top: auto;
+   }
+   
+   /* ==========================
+      Card & Image Styling
+      ========================== */
+   .card {
+     padding: 2em;
+     width: 100%;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     border-radius: 8px;
+   }
+   
+   .pokemons {
+     width: 300px;
+     height: auto;
+     position: left;
+   }
+   
+   .platzi-experiencia {
+     text-align: left;
+   }
+   
+   .read-the-docs {
+     color: #888;
+   }
+   
+   .box {
+     border: 1px solid #ccc;
+     padding: 10px;
+     margin: 5px;
+   }
+   
+   /* ==========================
+      Footer Styling
+      ========================== */
+   footer {
+     background-color: black;
+     text-align: center;
+     color: #fff;
+     padding: 1em;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+   
+   footer p {
+     margin: 0;
+     font-size: 1rem;
+   }
+   
+   /* ==========================
+      Typing Animation
+      ========================== */
+   @keyframes typing {
+     from {
+       width: 0;
+     }
+   
+     to {
+       width: 100%;
+     }
+   }
+   
+   .texto {
+     overflow: hidden;
+     white-space: nowrap;
+     width: 100%;
+     max-width: fit-content;
+     animation: typing 5s steps(50, end) forwards;
+     color: black;
+     font-family: monospace;
+     position: relative;
+   }
+   
+   /* ==========================
+      Responsive Design
+      ========================== */
+   @media (max-width: 768px) {
+     #root {
+       padding: 1rem;
+     }
+   
+     .icono {
+       flex-direction: column;
+     }
+   
+     .icono .logo {
+       max-height: 100px;
+     }
+   
+     .texto {
+       font-size: 1.2rem;
+     }
+   
+     .col-xs-2 {
+       width: 50%; /* Dos columnas por fila en pantallas medianas */
+     }
+   }
+   
+   @media (max-width: 480px) {
+     .texto {
+       font-size: 1rem;
+     }
   }
-  to {
-    width: 100%; /* Termina mostrando todo el texto */
-  }
-}
-
-.texto {
-  overflow: hidden; /* Oculta el texto que se está escribiendo */
-  white-space: nowrap; /* Evita que el texto se desplace a la siguiente línea */
-  width: 100%; /* Mantiene el ancho completo del contenedor */
-  max-width: fit-content; /* Ajusta el contenedor al ancho del texto */
-  animation: typing 5s steps(50, end) forwards; /* Aplica la animación */
-  color: black; /* Color del texto */
-  font-family: monospace; /* Fuente monoespaciada para un efecto de escritura más auténtico */
-  position: relative; /* Necesario para evitar desplazamiento */
-}
-
-
-footer {
-  position: fixed; /* Hace que el footer esté fijo */
-  bottom: 0; /* Alinea el footer al fondo */
-  left: 0; /* Alinea el footer al lado izquierdo */
-  right: 0; /* Alinea el footer al lado derecho */
-  background-color: black; /* Color de fondo del footer */
-  text-align: center; /* Centra el texto */
-  padding: 1em; /* Espaciado interno */
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
