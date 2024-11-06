@@ -7,6 +7,7 @@ import './App.css'
 import SocialMedia from './components/Social/SocialMedia';
 import Program from './components/Code/Program';
 import Database from './components/Base/Database';
+import Wordle from './components/Wordle/Wordle'
 
 
 
@@ -28,9 +29,12 @@ function App() {
 
       <div>
          <Program />
-         <br/>
-         <Database />
+         <br />
+         <Database />  
+         <Wordle /> 
       </div>
+
+      
       </header>
 
       <br/>

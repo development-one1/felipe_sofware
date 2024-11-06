@@ -1,180 +1,148 @@
 /* ==========================
    Global Styles
    ========================== */
-   html, body {
-    background-color: white; /* Fondo blanco para toda la página */
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; /* Asegura que el fondo cubra al menos la altura de la ventana */
-    font-family: Arial, sans-serif; /* Establecer una fuente base */
-    overflow-y: visible;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px; /* Ancho máximo para el contenido */
-    margin: 0 auto; /* Centrar el contenedor */
-    padding: 1rem; /* Espaciado interno */
-}
-
-
-/* Opcional: Estilo para el contenedor principal */
-.container {
-    max-width: 1200px; /* Ancho máximo para contenido */
-    margin: 0 auto; /* Centrar el contenedor */
-    padding: 1rem; /* Espaciado interno */
-}
-
-/* Media Queries para pantallas más pequeñas */
-@media (max-width: 600px) {
-    body {
-        padding: 0.5rem; /* Reducir padding en pantallas pequeñas */
-    }
-}
-  #root {
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 2rem; /* Espaciado interno */
-    text-align: center;
-    box-sizing: border-box; /* Padding incluido en el tamaño total */
-  }
-  
-  /* ==========================
-     Layout Containers
-     ========================== */
-  .container {
-    display: flex; /* Flexbox para alinear horizontalmente */
-    align-items: center; /* Alinear verticalmente al centro */
-  }
-  
-  /* ==========================
-     Icono Styling
-     ========================== */
-  .icono {
-    display: flex; /* Activa flexbox en el contenedor */
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-right: 10px;
-    height: 42%;
-  }
-  
-  .icono .logo {
-    height: 150px;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 800ms;
-  }
-  
-  .icono .texto {
-    color: black;
-    margin-left: 1rem;
-    margin-top: auto; /* Empuja el texto hacia la parte inferior */
-  }
-  
-  /* ==========================
-     Card & Image Styling
-     ========================== */
-  .card {
-    padding: 2em;
-    width: 100%; /* Ocupa el ancho completo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  .pokemons {
-    width: 300px;
-    height: auto;
-    position: left;
-  }
-  
-  .platzi-experiencia {
-    text-align: left;
-  }
-  
-  .read-the-docs {
-    color: #888;
-  }
-  
-  /* ==========================
-     Footer Styling
-     ========================== */
-     footer {
-      position: relative; /* Cambiado de fixed a relative */
-      background-color: black;
-      text-align: center;
-      color: #fff; /* Cambiado a blanco para mejor contraste */
-      padding: 1em; /* Espaciado interno */
-      display: flex; /* Usar flexbox para alinear contenido */
-      flex-direction: column; /* Alinear elementos en columna */
-      align-items: center; /* Centrar elementos horizontalmente */
-  }
-  
-  footer p {
-      margin: 0; /* Eliminar margen por defecto */
-      font-size: 1rem; /* Tamaño de fuente base */
-  }
-  
-  /* Media Queries para pantallas más pequeñas */
-  @media (max-width: 600px) {
-      footer {
-          padding: 0.5em; /* Reducir padding en pantallas pequeñas */
-      }
-  
-      footer p {
-          font-size: 0.9rem; /* Tamaño de fuente más pequeño */
-      }
-  }
-  
-  
-  /* ==========================
-     Typing Animation
-     ========================== */
-  @keyframes typing {
-    from {
-      width: 0; /* Comienza sin mostrar el texto */
-    }
-    to {
-      width: 100%; /* Muestra todo el texto */
-    }
-  }
-  
-  .texto {
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-    max-width: fit-content;
-    animation: typing 5s steps(50, end) forwards;
-    color: black;
-    font-family: monospace;
-    position: relative;
-  }
-  
-  /* ==========================
-     Responsive Design
-     ========================== */
-  @media (max-width: 768px) {
-    #root {
-      padding: 1rem; /* Reduce el padding en pantallas pequeñas */
-    }
-  
-    .icono {
-      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-    }
-  
-    .icono .logo {
-      max-height: 100px; /* Limita la altura del logo */
-    }
-  
-    .texto {
-      font-size: 1.2rem; /* Ajusta tamaño de fuente */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .texto {
-      font-size: 1rem; /* Tamaño de fuente más pequeño en móviles */
-    }
-  }
-  
+   html,
+   body {
+     background-color: white;
+     margin: 0;
+     padding: 0;
+     min-height: 100vh;
+     font-family: Arial, sans-serif;
+     overflow-y: visible;
+     overflow-x: hidden;
+   }
+   
+   /* ==========================
+      Layout Containers
+      ========================== */
+   .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 1rem;
+   }
+   
+   
+   /* ==========================
+      Icono Styling
+      ========================== */
+   .icono {
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     margin-right: 10px;
+     height: 42%;
+   }
+   
+   .icono .logo {
+     height: 150px;
+     padding: 1.5em;
+     will-change: filter;
+     transition: filter 800ms;
+   }
+   
+   .icono .texto {
+     color: black;
+     margin-left: 1rem;
+     margin-top: auto;
+   }
+   
+   /* ==========================
+      Card & Image Styling
+      ========================== */
+   .card {
+     padding: 2em;
+     width: 100%;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     border-radius: 8px;
+   }
+   
+   .pokemons {
+     width: 300px;
+     height: auto;
+     position: left;
+   }
+   
+   .platzi-experiencia {
+     text-align: left;
+   }
+   
+   .read-the-docs {
+     color: #888;
+   }
+   
+   .box {
+     border: 1px solid #ccc;
+     padding: 10px;
+     margin: 5px;
+   }
+   
+   /* ==========================
+      Footer Styling
+      ========================== */
+   footer {
+     background-color: black;
+     text-align: center;
+     color: #fff;
+     padding: 1em;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+   
+   footer p {
+     margin: 0;
+     font-size: 1rem;
+   }
+   
+   /* ==========================
+      Typing Animation
+      ========================== */
+   @keyframes typing {
+     from {
+       width: 0;
+     }
+   
+     to {
+       width: 100%;
+     }
+   }
+   
+   .texto {
+     overflow: hidden;
+     white-space: nowrap;
+     width: 100%;
+     max-width: fit-content;
+     animation: typing 5s steps(50, end) forwards;
+     color: black;
+     font-family: monospace;
+     position: relative;
+   }
+   
+   /* ==========================
+      Responsive Design
+      ========================== */
+   @media (max-width: 768px) {
+     #root {
+       padding: 1rem;
+     }
+   
+     .icono {
+       flex-direction: column;
+     }
+   
+     .icono .logo {
+       max-height: 100px;
+     }
+   
+     .texto {
+       font-size: 1.2rem;
+     }
+   
+     .col-xs-2 {
+       width: 50%; /* Dos columnas por fila en pantallas medianas */
+     }
+   }
+   
+   @media (max-width: 480px) {
+     .texto {
+       font-size: 1rem;
