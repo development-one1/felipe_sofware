@@ -5,7 +5,6 @@ import './App.css';
 import SocialMedia from './components/Social/SocialMedia';
 import Program from './components/Code/Program';
 
-import Wordle from './components/Wordle/Wordle';
 
 function App() {
 
@@ -23,8 +22,7 @@ function App() {
         </div>
 
         <div>
-          <Program />  
-          <Wordle />
+          <Program />    
         </div>
       </header>
 

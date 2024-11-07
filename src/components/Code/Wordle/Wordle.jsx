@@ -2,7 +2,13 @@ import { useRef } from 'react';
 import { styled } from '@stitches/react';
 import { useTrail, animated } from '@react-spring/web';
 
-
+const AppContainer = styled('div', {
+  width: '100vw',
+  height: '100vh',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+})
 
 const Container = styled('div', {
   display: 'flex',
@@ -67,7 +73,7 @@ function Wordle() {
   };
 
   return (
-    <div className="wordle-container">
+    <AppContainer>
       <Container onClick={handleClick}>
         {trail.map(({ rotateX }, i) => (
           <Box key={i} className="wordle-box"> {/* Usamos la clase aquí */}
@@ -92,7 +98,7 @@ function Wordle() {
           </Box>
         ))}
       </Container>
-    </div>
+      </AppContainer>
   );
 }
 
