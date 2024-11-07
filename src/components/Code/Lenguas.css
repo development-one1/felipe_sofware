@@ -4,7 +4,7 @@
   justify-content: center; /* Centra los elementos horizontalmente */
   align-items: center; /* Opcional, para centrar verticalmente */
   gap: 15px; /* Espacio entre los elementos */
-  padding: 10px;
+  padding: 5px;
 }
 
 /* Contenedor de los iconos */
@@ -26,7 +26,7 @@
 /* ==========================
    Media Queries
    ========================== */
-@media (max-width: 768px) {
+@media (max-width: 708px) {
   /* Adjust padding for smaller screens */
   .program-container {
     flex-direction: column; /* Stack items vertically on small screens */
