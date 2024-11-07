@@ -4,10 +4,12 @@
    .len {
     display: flex;
     flex-direction: column; /* Items arranged in column */
-    align-items: flex-start; /* Align items to the left */
+    align-items: center; /* Align items to the center horizontally */
+    justify-content: center; /* Align items to the center vertically (if needed) */
     gap: 10px; /* Space between items */
     color: #000000;
-    padding-left: 20px; /* Default padding */
+    padding-left: 0px; /* Reduced padding on the left to move them slightly left */
+    padding-right: 190px; /* Padding for balanced spacing */
     max-width: 100%;
   }
   
@@ -17,14 +19,16 @@
   @media (max-width: 768px) {
     /* Adjust padding for smaller screens */
     .len {
-      padding-left: 15px;
+      padding-left: 5px; /* Adjust padding to move slightly more left on smaller screens */
+      padding-right: 15px; /* Adjust padding for smaller screens */
     }
   }
   
   @media (max-width: 480px) {
     /* Further reduce padding for very small screens */
     .len {
-      padding-left: 10px;
+      padding-left: 0px; /* Remove padding to bring icons closer to the left */
+      padding-right: 10px; /* Further reduce space */
     }
   }
   
