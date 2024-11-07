@@ -1,3 +1,7 @@
+
+@import './components/code/Lenguas.css';
+@import './components/Wordle/Wordle.css';
+
 /* ==========================
    Global Styles
    ========================== */
@@ -49,12 +53,34 @@
    /* ==========================
       Card & Image Styling
       ========================== */
+
    .card {
-     padding: 2em;
-     width: 100%;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     border-radius: 8px;
-   }
+    padding: 2em;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease; /* Transición suave */
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
+  }
+
+
+
+
+
+  /* Card component */
+
+.card-title {
+  color: #888;
+}
+
+.card-image {
+  width: 300px;
+  height: auto;
+}
+
    
    .pokemons {
      width: 300px;
@@ -79,7 +105,7 @@
    /* ==========================
       Footer Styling
       ========================== */
-   footer {
+   .footer {
      background-color: black;
      text-align: center;
      color: #fff;
@@ -89,10 +115,11 @@
      align-items: center;
    }
    
-   footer p {
+   .footer p {
      margin: 0;
      font-size: 1rem;
    }
+
    
    /* ==========================
       Typing Animation
@@ -146,3 +173,5 @@
    @media (max-width: 480px) {
      .texto {
        font-size: 1rem;
+     }
+  }

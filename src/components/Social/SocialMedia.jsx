@@ -16,6 +16,7 @@ function SocialMedia() {
               <a href='https://www.instagram.com/felipe_develop/'>
                 <FontAwesomeIcon icon={faInstagram} size="2x" color="#E1306C"/>
               </a>
+              
             </div>
     </>
   );

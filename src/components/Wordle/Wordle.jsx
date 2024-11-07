@@ -2,13 +2,7 @@ import { useRef } from 'react';
 import { styled } from '@stitches/react';
 import { useTrail, animated } from '@react-spring/web';
 
-const AppContainer = styled('div', {
-  width: '70vw',
-  height: '100vh',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-});
+
 
 const Container = styled('div', {
   display: 'flex',
@@ -38,7 +32,6 @@ const SharedStyles = {
 
 const FrontBox = styled(animated.div, {
   ...SharedStyles,
-  
   border: 'solid 2px #1a1a1a',
   color: '#ff0000',
 });
@@ -52,7 +45,7 @@ const BackBox = styled(animated.div, {
 
 const items = ['80%', '90%', '70%', '60%', '50%', '45%'];
 
-function  Wordle() {
+function Wordle() {
   const [trail, api] = useTrail(items.length, () => ({
     rotateX: 0,
   }));
@@ -74,15 +67,16 @@ function  Wordle() {
   };
 
   return (
-    <AppContainer>
+    <div className="wordle-container">
       <Container onClick={handleClick}>
         {trail.map(({ rotateX }, i) => (
-          <Box key={i}>
+          <Box key={i} className="wordle-box"> {/* Usamos la clase aquí */}
             <FrontBox
               style={{
                 transform: rotateX.to((val) => `perspective(600px) rotateX(${val}deg)`),
                 transformStyle: 'preserve-3d',
               }}
+              className="front-box" 
             >
               {'?'}
             </FrontBox>
@@ -91,15 +85,15 @@ function  Wordle() {
                 transform: rotateX.to((val) => `perspective(600px) rotateX(${180 - val}deg)`),
                 transformStyle: 'preserve-3d',
               }}
+              className="back-box" 
             >
               {items[i]}
             </BackBox>
           </Box>
         ))}
       </Container>
-    </AppContainer>
+    </div>
   );
-  
 }
 
 export default Wordle;
