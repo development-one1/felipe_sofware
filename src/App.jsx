@@ -10,17 +10,19 @@ function App() {
 
   return (
     <>
-      <header>
-        <div className="container">
+    <navbar>
+      <div className="container">
           <div className="icono">
             <a href="https://development-one1.github.io/felipe_sofware/" target="_blank">
               <img src={fd} className="logo" alt="felipe develop" />
             </a>
             <h1 className="texto">Felipe_Develop</h1>
           </div>
-          <SocialMedia />
+           <SocialMedia /> 
         </div>
+    </navbar>
 
+      <header>
         <div>
           <Program />    
         </div>

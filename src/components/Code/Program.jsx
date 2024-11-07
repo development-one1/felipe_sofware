@@ -17,10 +17,12 @@ function Program() {
             <FontAwesomeIcon icon={faDatabase} size="2x" color="#333" />
             <FontAwesomeIcon icon={faGithub} size="2x" color="#333" />
             <FontAwesomeIcon icon={faCodeBranch} size="2x" color="#333" /> 
-          </div>
+          
+        </div>
         <div className="wordle-container">
             <Wordle />
         </div>
+        
         
       </div>
     </>

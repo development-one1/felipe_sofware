@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: center; 
   align-items: center;
+  margin: auto;
   gap: 30px; /* Espacio entre los iconos */
 }
 
@@ -34,8 +35,8 @@
   }
 
   .len {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .wordle-container {
