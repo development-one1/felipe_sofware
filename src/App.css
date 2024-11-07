@@ -169,17 +169,9 @@
        width: 50%; /* Dos columnas por fila en pantallas medianas */
      }
    }
-   
-<<<<<<< HEAD
-   @media (max-width: 480px) {
-     .texto {
-       font-size: 1rem;
-     }
-  }
-=======
+
   @media (max-width: 480px) {
     .texto {
       font-size: 1rem;
     }
    }
->>>>>>> 68f1711758fd168d2b7ab1c77cb325ff3ce0fd72
