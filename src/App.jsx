@@ -2,8 +2,12 @@ import pokemons from './assets/pokemons.png';
 import fd from './assets/fd.jpg';
 
 import './App.css';
+import './components/Wordle/We.css'
 import SocialMedia from './components/Social/SocialMedia';
 import Program from './components/Code/Program';
+import Watsapp from './components/Ws/Watsapp';
+import Wordle from './components/Wordle/Wordle';
+
 
 
 function App() {
@@ -17,23 +21,28 @@ function App() {
               <img src={fd} className="logo" alt="felipe develop" />
             </a>
             <h1 className="texto">Felipe_Develop</h1> 
-          </div>
+          </div> 
           
-           
         </div>
-        <div className='social'>
+        <div>
             <SocialMedia />
-          </div>
+        </div>
     </navbar>
+    
+      <br />
+      
 
       <header>
-        <div>
-          <Program />    
+          <div>
+            <Program />     
+          </div>
+        <div className='wordle-container'>
+           <Wordle /> 
         </div>
       </header>
 
       <br />
-
+      
       <section>
         <div className="card"> {/* Aquí se usa la clase 'card' */}
           <p className="read-the-docs">
@@ -51,11 +60,12 @@ function App() {
         </div>
       </section>
 
+    <Watsapp />
       <br />
 
-      <div className="footer">
+      <footer>
         <p>&copy; 2025 Felipe_develop. Todos los derechos reservados.</p>
-      </div>
+      </footer>
     </>
   );
 }

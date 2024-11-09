@@ -73,7 +73,7 @@ function Wordle() {
   };
 
   return (
-    <AppContainer>
+    <AppContainer>   
       <Container onClick={handleClick}>
         {trail.map(({ rotateX }, i) => (
           <Box key={i} className="wordle-box"> {/* Usamos la clase aquí */}

@@ -1,76 +1,78 @@
-
-@import './components/code/Lenguas.css';
-
 /* ==========================
    Global Styles
    ========================== */
-   html,
-   body {
-     background-color: white;
-     margin: 10px;
-     padding: 10;
-     min-height: 50vh;
-     font-family: Arial, sans-serif;
-     overflow-y: visible;
-     overflow-x: hidden;
-   }
-   
-   /* ==========================
-      Layout Containers
-      ========================== */
-      .container {
-        position: relative;
-        padding: 25px;
-        width: auto;
-        max-width: 100%;
-        margin: auto;
-        height: 100%; /* Cambia a la altura que prefieras */
-    }
-   
-   
-   /* ==========================
-      Icono Styling
-      ========================== */
-   .icono {
-     display: flex;
-     justify-content: flex-start;
-     align-items: flex-start;
-     margin-right: 10px;
-     position: absolute;
-     height: auto;
-     width: auto;
-   }
-   
-   .icono .logo {
-     height: 150px;
-     padding: 2px;
-     will-change: filter;
-     transition: filter 800ms;
-   }
-   
-   .icono .texto {
-     color: black;
-     margin-left: 1px;
-     margin-top: auto;
-   }
-
-   .social {
-    max-width: 92%;
-    height: 100px;
-    overflow: hidden; /* Oculta cualquier contenido desbordado */
+   html, body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
+  }
   
+  * {
+    box-sizing: border-box; /* Asegura que el padding y border no afecten el tamaño */
+  }
+  
+  /* ==========================
+     Layout Containers
+     ========================== */
+  .container {
+    background-color: white;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px; /* Añadir algo de padding para que no esté pegado a los bordes */
+  }
+  
+  .container .content {
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto;
+  }
+  
+  /* ==========================
+     Icono Styling
+     ========================== */
+  .icono {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 10px;
+    position: relative;
+    height: auto;
+    width: auto;
+  }
+  
+  .icono .logo {
+    height: 150px;
+    padding: 2px;
+    transition: filter 800ms;
+  }
+  
+  .icono .texto {
+    color: black;
+    margin-left: 10px;
+    margin-top: auto;
+  }
+  
+  /* ==========================
+     Social Links Styling
+     ========================== */
+  .social {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5px;
-}
-
-
-   /* ==========================
-      Card & Image Styling
-      ========================== */
-
-   .card {
+    gap: 15px;
+    margin-top: 20px;
+    max-width: 92%;
+    height: auto;
+  }
+  
+  /* ==========================
+     Card & Image Styling
+     ========================== */
+  .card {
     padding: 2em;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -81,113 +83,146 @@
   .card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
   }
-
-
-
-
-
-  /* Card component */
-
-.card-title {
-  color: #888;
-}
-
-.card-image {
-  width: 300px;
-  height: auto;
-}
-
-   
-   .pokemons {
-     width: 300px;
-     height: auto;
-     position: left;
-   }
-   
-   .platzi-experiencia {
-     text-align: left;
-   }
-   
-   .read-the-docs {
-     color: #888;
-   }
-   
-   .box {
-     border: 1px solid #ccc;
-     padding: 10px;
-     margin: 5px;
-   }
-   
-   /* ==========================
-      Footer Styling
-      ========================== */
-   .footer {
-     background-color: black;
-     text-align: center;
-     color: #fff;
-     padding: 1em;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-   }
-   
-   .footer p {
-     margin: 0;
-     font-size: 1rem;
-   }
-
-   
-   /* ==========================
-      Typing Animation
-      ========================== */
-   @keyframes typing {
-     from {
-       width: 0;
-     }
-   
-     to {
-       width: 100%;
-     }
-   }
-   
-   .texto {
-     overflow: hidden;
-     white-space: nowrap;
-     width: 100%;
-     max-width: fit-content;
-     animation: typing 5s steps(50, end) forwards;
-     color: black;
-     font-family: monospace;
-     position: relative;
-   }
-   
-   /* ==========================
-      Responsive Design
-      ========================== */
-   @media (max-width: 768px) {
-     #root {
-       padding: 1rem;
-     }
-   
-     .icono {
-       flex-direction: column;
-     }
-   
-     .icono .logo {
-       max-height: 100px;
-     }
-   
-     .texto {
-       font-size: 1.2rem;
-     }
-   
-     .col-xs-2 {
-       width: 50%; /* Dos columnas por fila en pantallas medianas */
-     }
-   }
-
+  
+  .card-title {
+    color: #888;
+  }
+  
+  .card-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .pokemons {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .platzi-experiencia {
+    text-align: left;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  
+  .box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  /* ==========================
+     Footer Styling
+     ========================== */
+     footer {
+      width: 100%; /* Asegura que ocupe todo el ancho de la página */
+      background-color: black;
+      text-align: center;
+      color: #fff;
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative; /* Para que no se quede pegado al fondo si no hay contenido suficiente */
+      margin-top: auto; /* Empuja el footer hacia abajo en caso de que haya poco contenido */
+    }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* ==========================
+     Typing Animation
+     ========================== */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+  
+  .texto {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    max-width: fit-content;
+    animation: typing 5s steps(50, end) forwards;
+    color: black;
+    font-family: monospace;
+    position: relative;
+  }
+  
+  /* ==========================
+     Responsive Design
+     ========================== */
+  
+  /* For screens less than 768px (mobile/tablet) */
+  @media (max-width: 768px) {
+    html, body {
+      padding: 10px;
+    }
+  
+    .icono {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .icono .logo {
+      max-height: 100%;
+    }
+  
+    .texto {
+      font-size: 1.2rem;
+    }
+  
+    .social {
+      flex-direction: column; /* Apila los iconos en pantallas más pequeñas */
+      margin-top: 20px;
+    }
+  
+    .card {
+      padding: 1em;
+    }
+  
+    .card-image {
+      width: auto;
+    }
+  
+    .col-xs-2 {
+      width: auto; /* Apilar columnas */
+    }
+  }
+  
+  /* For screens less than 480px (small screens) */
   @media (max-width: 480px) {
     .texto {
       font-size: 1rem;
     }
-   }
+  
+    footer {
+      padding: 1.5em 0.5em;
+    }
+  }
+  
+  /* For screens between 480px and 708px (smaller devices) */
+  @media (max-width: 708px) {
+    .program-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .wordle-container {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+  

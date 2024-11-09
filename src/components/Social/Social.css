@@ -1,13 +1,16 @@
 .social {
   display: flex; /* Alinear los iconos de redes sociales en línea */
   gap: 10px; /* Espacio entre los iconos de redes sociales */
-  position: relative; /* Cambiado a relativo para un mejor comportamiento en responsividad */
+  position: fixed; /* Fijar la posición de los iconos a la pantalla */
   top: 10px; /* Alinear en la parte superior con más espacio */
-  right: 10px; /* Alinear a la derecha con más espacio */
-  z-index: 1000; /* Asegúrate de que los iconos estén por encima de otros elementos */
+  right: 40px; /* Alinear a la derecha con más espacio */
+  z-index: 1; /* Asegúrate de que los iconos estén por encima de otros elementos */
   flex-wrap: wrap; /* Permitir que los iconos se envuelvan si hay poco espacio */
   justify-content: flex-end; /* Alinear a la derecha */
 }
+
+
+
 
 @media (max-width: 768px) {
   .social {

@@ -1,0 +1,26 @@
+/* Ws.css */
+
+/* Contenedor flotante */
+.whatsapp-flotante {
+    position: fixed; /* Posición fija en la pantalla */
+    bottom: 40px;    /* A 40px del borde inferior */
+    right: 10px;     /* A 40px del borde derecho (desplazado un poco más) */
+    z-index: 1000;   /* Asegura que esté por encima de otros elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilos para el ícono */
+  .whatsapp-icono-img {
+    border-radius: 50%;         /* Hacer el ícono circular */
+    padding: 10px;              /* Espaciado alrededor del ícono */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra para hacer que el ícono resalte */
+    transition: transform 0.3s ease-in-out;  /* Transición suave */
+  }
+  
+  /* Efecto hover: agrandar el ícono */
+  .whatsapp-icono-img:hover {
+    transform: scale(1.2);   /* Agranda el ícono al pasar el mouse */
+  }
+  

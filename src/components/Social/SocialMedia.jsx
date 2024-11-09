@@ -7,7 +7,7 @@ function SocialMedia() {
   return (
     <>
             <div className='social'>
-              <a href=''>
+              <a href='https://web.facebook.com/felipebusinessman'>
                 <FontAwesomeIcon icon={faFacebook} size="2x" color="#3b5998"/>
               </a>
               <a href='https://www.linkedin.com/in/camacho-rodriguez/'>
@@ -15,9 +15,8 @@ function SocialMedia() {
               </a>
               <a href='https://www.instagram.com/felipe_develop/'>
                 <FontAwesomeIcon icon={faInstagram} size="2x" color="#E1306C"/>
-              </a>
-              
-            </div>
+              </a> 
+          </div>
     </>
   );
 }

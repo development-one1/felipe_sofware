@@ -1,52 +1,33 @@
 /* Program container to place elements side by side */
 #program {
   display: flex; /* Usa Flexbox para alinear los elementos */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  align-items: center; /* Opcional, para centrar verticalmente */
-  gap: 15px; /* Espacio entre los elementos */
-  padding: 5px;
+  padding: 90px;
 }
+
 
 /* Contenedor de los iconos */
 .len {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;
-  margin: auto;
-  gap: 30px; /* Espacio entre los iconos */
+  align-items: flex-start; /* Alinea el contenido a la izquierda */
+  margin-left: 15; /* Asegura que esté a la izquierda */
+  gap: 40px; /* Espacio entre los iconos */
 }
 
-/* Contenedor de Wordle */
-.wordle-container {
-  display: flex;
-  justify-content: center; /* Centra Wordle horizontalmente */
-  align-items: center; /* Centra Wordle verticalmente */
-}
 
 /* ==========================
    Media Queries
    ========================== */
 @media (max-width: 708px) {
-  /* Adjust padding for smaller screens */
-  .program-container {
-    flex-direction: column; /* Stack items vertically on small screens */
-    align-items: center; /* Center content on smaller screens */
-  }
-
+  /* Ajustar padding para pantallas más pequeñas */
   .len {
     padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .wordle-container {
-    margin-left: 0; /* Adjust margin for small screens */
-    margin-top: 20px; /* Space between items in vertical layout */
+    padding-right: 60px;
   }
 }
 
 @media (max-width: 480px) {
-  /* Further reduce padding for very small screens */
+  /* Reducir aún más el padding para pantallas muy pequeñas */
   .len {
     padding-left: 10px;
     padding-right: 10px;
